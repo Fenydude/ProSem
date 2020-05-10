@@ -1,0 +1,9 @@
+//add_assignment
+
+add_assignment <- sc_node_not_relation;;
+
+//Идентификаторы
+add_assignment => nrel_idtf: [ operator += ](* <- lang_en;; *);;
+add_assignment => nrel_main_idtf: [add assignment](* <- lang_en;; *);;
+
+

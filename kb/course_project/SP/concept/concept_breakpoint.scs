@@ -1,0 +1,39 @@
+sc_node_not_relation->concept_breakpoint;;
+sc_node_not_relation->concept_program;;
+sc_node_not_relation->concept_debugger;;
+sc_node_not_relation->concept_condition;;
+
+sc_node_norole_relation->nrel_interruption_of_execution;;
+sc_node_norole_relation->nrel_interruption;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_breakpoint=> nrel_main_idtf: [Точка останова](* <- lang_ru;; *);;
+concept_breakpoint=> nrel_main_idtf: [Breakpoint](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_breakpoint;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_breakpoint">Точка останова</b></sc_element> — это преднамеренное <b><sc_element sys_idtf="nrel_interruption_of_execution">прерывание выполнения</b></sc_element> <b><sc_element sys_idtf="concept_program">программы</b></sc_element>, при котором выполняется вызов <b><sc_element sys_idtf="concept_debugger">отладчика</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (точка останова)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_program;
+        concept_debugger;
+
+        nrel_interruption_of_execution
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_breakpoint;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[На практике <b><sc_element sys_idtf="concept_breakpoint">точка останова</b></sc_element> определяется как одно или несколько <b><sc_element sys_idtf="concept_condition">условий</b></sc_element>, при которых происходит <b><sc_element sys_idtf="nrel_interruption">прерывание</b></sc_element> <b><sc_element sys_idtf="concept_program">программы</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(точка останова).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_condition;
+        concept_program;
+ 
+        nrel_interruption
+    };;
+*);;

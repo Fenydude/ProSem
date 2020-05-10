@@ -1,0 +1,37 @@
+sc_node_not_relation->concept_arrow_function;;
+sc_node_not_relation->concept_anonymous_function;;
+
+sc_node_norole_relation->nrel_argument;;
+sc_node_norole_relation->nrel_value;;
+sc_node_norole_relation->nrel_area_of_visibility;;
+sc_node_norole_relation->nrel_return;;
+
+concept_arrow_function=> nrel_main_idtf: [стрелочная функция](* <- lang_ru;; *);;
+concept_arrow_function=> nrel_main_idtf: [arrow function](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_arrow_function;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Стрелочная функция — это <b><sc_element sys_idtf="concept_anonymous_function">анонимная функция</b></sc_element> с особым синтаксисом, которая принимает фиксированное число <b><sc_element sys_idtf="nrel_argument">аргументов</b></sc_element> и работает в контексте включающей её <b><sc_element sys_idtf="nrel_area_of_visibility">области видимости</b></sc_element>.](*<-lang_ru;;  => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (стрелочная функция)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_anonymous_function;
+        nrel_argument;
+        nrel_area_of_visibility
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_arrow_function;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Стрелочная функция предполагает наличе <b><sc_element sys_idtf="nrel_argument">аргументов</b></sc_element>, также стрелочная функция может <b><sc_element sys_idtf="nrel_return">возвращать</b></sc_element> <b><sc_element sys_idtf="nrel_value">значение</b></sc_element>.](*<-lang_ru;;  => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение (стрелочная функция).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        nrel_argument;
+        nrel_return;
+        nrel_value
+    };;
+*);;

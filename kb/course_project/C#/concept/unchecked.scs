@@ -1,0 +1,10 @@
+//unchecked
+//проверка на переполнение
+
+unchecked <- sc_node_not_relation;;
+
+//Идентификаторы
+unchecked => nrel_main_idtf: [проверка на переполнение](* <- lang_ru;; *);;
+unchecked => nrel_main_idtf: [unchecked](* <- lang_en;; *);;
+
+

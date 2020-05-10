@@ -1,0 +1,33 @@
+//extern
+//Использование внешних псевдонимов
+
+//Идентификаторы
+nrel_extern => nrel_main_idtf: [ extern* ](* <- lang_en;; *);;
+
+//Свойства
+relation => nrel_inclusion: oriented_relation;; 
+relation => nrel_inclusion: norole_relation;;
+relation => nrel_inclusion: binary_relation;;
+oriented_relation -> nrel_extern;;
+norole_relation-> nrel_extern;;
+binary_relation => nrel_inclusion: antireflexive_relation;;
+binary_relation => nrel_inclusion: asymmetric_relation;; 
+binary_relation => nrel_inclusion: antitransitive_relation;; 
+antitransitive_relation -> nrel_extern;;
+antireflexive_relation  -> nrel_extern;; 
+asymmetric_relation  -> nrel_extern;;
+
+//Домены
+nrel_extern => nrel_first_domain: concept_namespace;;
+nrel_extern => nrel_second_domain: alias;;
+nrel_extern => nrel_definitional_domain:
+{
+    concept_namespace;
+    alias
+};;
+//Арность
+sc_node_not_relation -> ..y;;
+arity -> ..y;;
+..y -> nrel_extern;;
+concept_2 <- number;;
+concept_2 <= measurement: ..y;;

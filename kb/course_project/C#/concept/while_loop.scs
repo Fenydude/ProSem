@@ -1,0 +1,10 @@
+
+
+concept_while_loop <- sc_node_not_relation;;
+concept_while_loop <- concept_loop;;
+
+//Идентификаторы
+concept_while_loop => nrel_main_idtf: [цкил while](* <- lang_ru;; *);;
+concept_while_loop => nrel_main_idtf: [while loop](* <- lang_en;; *);;
+
+

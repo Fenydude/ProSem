@@ -1,0 +1,43 @@
+sc_node_not_relation->concept_css_selector;;
+sc_node_not_relation->concept_key_word;;
+sc_node_not_relation->concept_jQuery_selector;;
+sc_node_not_relation->concept_html_element;;
+sc_node_not_relation->concept_css_rule;;
+
+
+sc_node_norole_relation->nrel_defines;;
+sc_node_norole_relation->nrel_used;;
+sc_node_norole_relation->nrel_apply;;
+
+concept_css_selector=> nrel_main_idtf: [CSS-селектор* ](* <- lang_ru;; *);;
+concept_css_selector=> nrel_main_idtf: [CSS-selector* ](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_css_selector;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[CSS-селектор* - это <b><sc_element sys_idtf="concept_key_word">ключевое слово</b></sc_element>, 
+    которое <b><sc_element sys_idtf="nrel_defines">определяет</b></sc_element>, к какому <b><sc_element sys_idtf="concept_html_element">html-элементу</b></sc_element> 
+    <b><sc_element sys_idtf="nrel_apply">применять</b></sc_element> то или иное <b><sc_element sys_idtf="concept_css_rule">CSS-правило</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (CSS-селектор)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_key_word;
+        nrel_defines;
+        concept_html_element;
+        nrel_apply;
+        concept_css_rule
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_css_selector;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[CSS-selector <b><sc_element sys_idtf="nrel_used">используется</b></sc_element> в <b><sc_element sys_idtf="concept_jQuery_selector">jQuery-селекторах</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение (CSS-селектор).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        nrel_used;
+        concept_jQuery_selector
+    };;
+*);;

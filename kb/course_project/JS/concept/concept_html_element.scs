@@ -1,0 +1,46 @@
+sc_node_not_relation->concept_web_page;;
+sc_node_not_relation->concept_html_language;;
+sc_node_not_relation->concept_structural_unit;;
+sc_node_not_relation->concept_text_editor;;
+sc_node_not_relation->concept_opening_html_tag;;
+sc_node_not_relation->concept_closing_html_tag;;
+sc_node_not_relation->concept_element;;
+sc_node_not_relation->concept_html_element;;
+
+sc_node_norole_relation->nrel_written;;
+sc_node_norole_relation->nrel_exist;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_html_element=> nrel_main_idtf: [html элемент](* <- lang_ru;; *);;
+concept_html_element=> nrel_main_idtf: [html element](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_html_element;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_html_element">Элемент HTML</b></sc_element> — это основная <b><sc_element sys_idtf="concept_structural_unit">структурная единица</b></sc_element> <b><sc_element sys_idtf="concept_web_page">веб страницы</b></sc_element>, <b><sc_element sys_idtf="nrel_written">написанная</b></sc_element>на <b><sc_element sys_idtf="concept_html_language">языке HTML</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (html элемент)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_web_page;
+        concept_html_language;
+        concept_structural_unit;
+
+        nrel_written
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_html_element;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_element">Элементы</b></sc_element> <b><sc_element sys_idtf="concept_web_page">страницы</b></sc_element> <b><sc_element sys_idtf="nrel_exist">находятся</b></sc_element> между <b><sc_element sys_idtf="concept_opening_html_tag">открывающим тегом <HTML></b></sc_element> и <b><sc_element sys_idtf="concept_closing_html_tag">закрывающим </HTML></b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(html элемент).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_opening_html_tag;
+        concept_web_page;
+        concept_closing_html_tag;
+        concept_element;
+
+        nrel_exist
+    };;
+*);;

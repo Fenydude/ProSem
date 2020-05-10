@@ -1,0 +1,38 @@
+sc_node_not_relation->concept_html;;
+sc_node_not_relation->concept_document_markup_language;;
+sc_node_not_relation->concept_formatted_text;;
+sc_node_not_relation->concept_display;;
+sc_node_not_relation->concept_browser;;
+
+sc_node_norole_relation->nrel_interpreted;;
+sc_node_norole_relation->nrel_displayed;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_html=> nrel_main_idtf: [HTML](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_html;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_html">HTML</b></sc_element> — стандартизированный <b><sc_element sys_idtf="concept_document_markup_language">язык разметки документов</b></sc_element> во Всемирной паутине.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (html)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_document_markup_language
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_html;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Язык <b><sc_element sys_idtf="concept_html">HTML</b></sc_element> <b><sc_element sys_idtf="nrel_interpreted">интерпритируется</b></sc_element> <b><sc_element sys_idtf="concept_browser">браузерами</b></sc_element>; полученный в результате интерпретации <b><sc_element sys_idtf="concept_formatted_text">форматированный текст</b></sc_element> <b><sc_element sys_idtf="nrel_displayed">отображается</b></sc_element> на <b><sc_element sys_idtf="concept_display">экране</b></sc_element> монитора компьютера или мобильного устройства.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(html).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_formatted_text;
+        concept_display;
+        concept_browser;
+
+        nrel_interpreted;
+        nrel_displayed
+    };;
+*);;

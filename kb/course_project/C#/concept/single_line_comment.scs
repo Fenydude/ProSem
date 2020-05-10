@@ -1,0 +1,10 @@
+//single_line_comment
+//однострочный комментарий
+
+concept_single_line_comment <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_single_line_comment => nrel_main_idtf: [однострочный комментарий](* <- lang_ru;; *);;
+concept_single_line_comment => nrel_main_idtf: [single line comment](* <- lang_en;; *);;
+
+

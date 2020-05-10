@@ -1,0 +1,42 @@
+sc_node_not_relation->concept_console;;
+sc_node_not_relation->concept_object;;
+sc_node_not_relation->concept_browser_debugging_tools;;
+sc_node_not_relation->concept_browser;;
+sc_node_not_relation->concept_method;;
+sc_node_not_relation->concept_property;;
+
+sc_node_norole_relation->nrel_support;;
+sc_node_norole_relation->nrel_access;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_console=> nrel_main_idtf: [консоль](* <- lang_ru;; *);;
+concept_console=> nrel_main_idtf: [console](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_console;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_console">Console</b></sc_element> - это<b><sc_element sys_idtf="concept_object">объект</b></sc_element>, который служит для <b><sc_element sys_idtf="nrel_access">доступа</b></sc_element> к <b><sc_element sys_idtf="concept_browser_debugging_tools">средствам отладки браузера</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (console)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_object;
+        concept_browser_debugging_tools;
+
+        nrel_access
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_console;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Работа с объектом <b><sc_element sys_idtf="concept_console">console</b></sc_element> отличается в разныз <b><sc_element sys_idtf="concept_browser">браузерах</b></sc_element>, но эти <b><sc_element sys_idtf="concept_method">методы</b></sc_element> и <b><sc_element sys_idtf="concept_property">свойства</b></sc_element> по факту <b><sc_element sys_idtf="nrel_support">поддерживаются</b></sc_element> всеми <b><sc_element sys_idtf="concept_browser">браузерами</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(console).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_browser;
+        concept_method;
+        concept_property;
+        
+        nrel_support
+    };;
+*);;

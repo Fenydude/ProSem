@@ -1,0 +1,48 @@
+sc_node_not_relation->concept_js;;
+sc_node_not_relation->concept_prototype_oriented_language;;
+sc_node_not_relation->concept_dynamic_typing;;
+sc_node_not_relation->concept_object_oriented_programming_style;;
+sc_node_not_relation->concept_imperative_programming_style;;
+sc_node_not_relation->concept_declarative_programming_style;;
+sc_node_not_relation->concept_embedded_language;;
+sc_node_not_relation->concept_application_objects;;
+
+sc_node_norole_relation->nrel_support;;
+sc_node_norole_relation->nrel_used;;
+sc_node_norole_relation->nrel_program_access;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_js=> nrel_main_idtf: [Джава скрипт](* <- lang_ru;; *);;
+concept_js=> nrel_main_idtf: [JavaScript](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_js;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_js">JavaScript</b></sc_element> - это <b><sc_element sys_idtf="concept_prototype_oriented_language">прототипно-ориентированный язык</b></sc_element> с <b><sc_element sys_idtf="concept_dynamic_typing">динамической типизацией</b></sc_element>, который <b><sc_element sys_idtf="nrel_support">поддерживает</b></sc_element> <b><sc_element sys_idtf="concept_object_oriented_programming_style">объектно-ориентированный</b></sc_element>, <b><sc_element sys_idtf="concept_imperative_programming_style">императивный</b></sc_element> и <b><sc_element sys_idtf="concept_declarative_programming_style">декларативный</b></sc_element> стили программирования.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (javascript)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_prototype_oriented_language;
+        concept_dynamic_typing;
+        concept_object_oriented_programming_style;
+        concept_imperative_programming_style;
+        concept_declarative_programming_style;
+
+       nrel_support
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_js;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_js">JavaScript</b></sc_element> обычно <b><sc_element sys_idtf="nrel_used">используется</b></sc_element> как <b><sc_element sys_idtf="concept_embedded_language">встраиваемый язык</b></sc_element> для <b><sc_element sys_idtf="nrel_program_access">программного досутпа</b></sc_element> к <b><sc_element sys_idtf="concept_application_objects">объектам приложений</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(javascript).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_embedded_language;
+        concept_application_objects;
+
+        nrel_used;
+        nrel_program_access
+    };;
+*);;

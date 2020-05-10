@@ -1,0 +1,10 @@
+//interface
+//интерфейс
+
+interface <- sc_node_not_relation;;
+
+//Идентификаторы
+interface => nrel_main_idtf: [интерфейс](* <- lang_ru;; *);;
+interface => nrel_main_idtf: [interface](* <- lang_en;; *);;
+
+

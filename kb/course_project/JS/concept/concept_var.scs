@@ -1,0 +1,40 @@
+sc_node_not_relation->concept_keyword;;
+sc_node_not_relation->concept_variable;;
+sc_node_not_relation->concept_js_language;;
+sc_node_not_relation->concept_block_scope;;
+sc_node_not_relation->concept_block_var;;
+
+sc_node_norole_relation->nrel_declaration;;
+sc_node_norole_relation->nrel_not_exist;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_var=> nrel_main_idtf: [вар](* <- lang_ru;; *);;
+concept_var=> nrel_main_idtf: [var](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_var;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_var">var</b></sc_element> - это <b><sc_element sys_idtf="concept_keyword">ключевое слово</b></sc_element> для <b><sc_element sys_idtf="nrel_declaration">объявления</b></sc_element> <b><sc_element sys_idtf="concept_variable">переменной</b></sc_element> в <b><sc_element sys_idtf="concept_js_language">языке JS</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (var)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_keyword;
+        concept_variable;
+        concept_js_language;
+
+        nrel_declaration
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_var;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Для <b><sc_element sys_idtf="concept_var">var</b></sc_element> <b><sc_element sys_idtf="nrel_not_exist">не существует</b></sc_element> <b><sc_element sys_idtf="concept_block_scope">блочной области видимости</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(var).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_block_scope;
+
+        nrel_not_exist
+    };;
+*);;

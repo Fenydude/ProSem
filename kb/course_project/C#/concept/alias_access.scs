@@ -1,0 +1,9 @@
+//alias_access
+
+alias_access <- sc_node_not_relation;;
+
+//Идентификаторы
+alias_access => nrel_idtf: [ operator :: ](* <- lang_en;; *);;
+alias_access => nrel_main_idtf: [alias access](* <- lang_en;; *);;
+
+

@@ -1,0 +1,39 @@
+sc_node_not_relation -> concept_lvalue_cpp;;
+sc_node_not_relation -> concept_expression;;
+sc_node_norole_relation -> concept_const;;
+
+
+concept_lvalue_cpp
+<- c_plus_plus;
+=> nrel_main_idtf:
+		[lvalue]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [lvalue]
+	    (* <- lang_ru;; *);
+
+<= nrel_inclusion : concept_expression;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_lvalue_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[lvalue - <b><sc_element sys_idtf="concept_expression">выражение</b> ссылающееся на область <b><sc_element sys_idtf="concept_memory">памяти</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (lvalue)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_expression;
+		concept_memory	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_lvalue_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_lvalue_cpp">lvalue</b> может быть <b><sc_element sys_idtf="concept_const">модифицируемым</b> и не модифицируемым](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(lvalue)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_const;
+		concept_lvalue_cpp
+	};;
+*);;

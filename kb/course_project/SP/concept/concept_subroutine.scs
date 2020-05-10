@@ -1,0 +1,6 @@
+sc_node_norole_relation->concept_subroutine;;
+
+
+concept_subroutine=> nrel_main_idtf: [подпрограмма* ](*<- lang_ru;;*);;
+concept_subroutine=> nrel_main_idtf: [subroutine* ](*<- lang_en;;*);;
+

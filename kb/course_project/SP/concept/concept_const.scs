@@ -1,0 +1,41 @@
+sc_node_not_relation->concept_keyword;;
+sc_node_not_relation->concept_variable;;
+sc_node_not_relation->concept_js_language;;
+sc_node_not_relation->concept_const;;
+
+sc_node_norole_relation->nrel_declaration;;
+sc_node_norole_relation->nrel_sets;;
+
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_const=> nrel_main_idtf: [конст](* <- lang_ru;; *);;
+concept_const=> nrel_main_idtf: [const](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_const;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_const">const</b></sc_element> - это <b><sc_element sys_idtf="concept_keyword">ключевое слово</b></sc_element> для <b><sc_element sys_idtf="nrel_declaration">объявления</b></sc_element> <b><sc_element sys_idtf="concept_variable">переменной</b></sc_element> в <b><sc_element sys_idtf="concept_js_language">языке JS</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (const)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_keyword;
+        concept_variable;
+        concept_js_language;
+
+        nrel_declaration
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_const;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Объявление <b><sc_element sys_idtf="concept_const">const</b></sc_element> <b><sc_element sys_idtf="nrel_sets">задает</b></sc_element> <b><sc_element sys_idtf="concept_variable">переменную</b></sc_element>, которую нельзя менять.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(const).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_variable;
+
+        nrel_sets
+
+    };;
+*);;

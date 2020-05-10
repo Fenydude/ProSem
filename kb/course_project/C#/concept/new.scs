@@ -1,0 +1,9 @@
+//new
+
+new <- sc_node_not_relation;;
+
+//Идентификаторы
+new => nrel_idtf: [ operator new ](* <- lang_en;; *);;
+new => nrel_main_idtf: [new](* <- lang_en;; *);;
+
+

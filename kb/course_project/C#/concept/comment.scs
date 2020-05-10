@@ -1,0 +1,10 @@
+//comment
+//комментарий
+
+concept_comment <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_comment => nrel_main_idtf: [комментарий](* <- lang_ru;; *);;
+concept_comment => nrel_main_idtf: [comment](* <- lang_en;; *);;
+
+

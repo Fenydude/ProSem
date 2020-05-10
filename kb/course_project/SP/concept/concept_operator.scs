@@ -1,0 +1,33 @@
+sc_node_not_relation->concept_operator;;
+sc_node_not_relation->concept_programming_language;;
+sc_node_not_relation->concept_program;;
+
+sc_node_norole_relation->nrel_consists;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_operator=> nrel_main_idtf: [Оператор](* <- lang_ru;; *);;
+concept_operator=> nrel_main_idtf: [Operator](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_operator;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_operator">Оператор</b></sc_element> — наименьшая автономная часть <b><sc_element sys_idtf="concept_programming_language">языка программирования</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (Оператор)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_programming_language
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_operator;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_program">Программа</b></sc_element> обычно <b><sc_element sys_idtf="nrel_consists">состоит</b></sc_element> из последовательности <b><sc_element sys_idtf="concept_operator">операторов</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(Оператор).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_program;
+
+        nrel_consists
+    };;
+*);;

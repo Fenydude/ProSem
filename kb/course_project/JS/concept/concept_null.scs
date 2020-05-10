@@ -1,0 +1,33 @@
+sc_node_not_relation->concept_null;;
+
+sc_node_norole_relation->nrel_data_type;;
+sc_node_norole_relation->nrel_value_of_variable;;
+sc_node_norole_relation->nrel_literal;;
+
+
+concept_null => nrel_main_idtf: [null](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_null;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[null - это <b><sc_element sys_idtf="nrel_data_type">тип данных</b></sc_element>, состоящий из единственного <b><sc_element sys_idtf="nrel_value_of_variable">значения</b></sc_element> null.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (null)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        nrel_data_type;
+        nrel_value_of_variable
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_null;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Значение null является <b><sc_element sys_idtf="nrel_literal">литералом</b></sc_element> JavaScript, представляющим нулевое или «пустое» <b><sc_element sys_idtf="nrel_value_of_variable">значение</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение (null).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        nrel_literal;
+        nrel_value_of_variable
+    };;
+*);;

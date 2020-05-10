@@ -1,0 +1,54 @@
+
+
+sc_node_not_relation->concept_data_structure;;
+
+
+
+concept_data_structure=> nrel_main_idtf: [структура данных](* <- lang_ru;; *);;
+concept_data_structure=> nrel_main_idtf: [data structure](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: concept_data_structure;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Структура данных  — программная единица, позволяющая хранить и обрабатывать множество однотипных и/или логически связанных данных в вычислительной технике.](*
+<-lang_ru;;
+=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (структура данных)](*<- lang_ru;;*);;
+=> nrel_using_constants: 
+{
+	
+
+  program
+
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element: concept_data_structure;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Для добавления, поиска, изменения и удаления данных структура данных предоставляет некоторый набор функций, составляющих её <b><sc_element sys_idtf="concept_interface">интерфейс</b></sc_element>.](*<- lang_ru;;
+=>nrel_format:format_html;;*);;
+=> nrel_main_idtf: [Утверждение(структура данных)](*<- lang_ru;;*);;*);;
+=> nrel_using_constants: 
+{
+   concept_interface
+
+};;
+*);;
+
+
+concept_data_structure <- rrel_key_sc_element:...
+(*
+<-illustration;;
+=>nrel_main_idtf:
+[визуализация структуры данных ] (* <- lang_ru;; *);;
+=>nrel_main_idtf:
+[data structure visualization](* <- lang_en;; *);;
+<=nrel_sc_text_translation:...
+(*
+->rrel_example: "file://IMG/datastructure.png"(*=>nrel_format:format_png;;*);;
+*);;
+
+*);;
+
+
+

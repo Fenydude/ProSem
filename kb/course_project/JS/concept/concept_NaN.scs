@@ -1,0 +1,28 @@
+sc_node_not_relation->concept_NaN;;
+
+sc_node_norole_relation->nrel_value_of_variable;;
+
+concept_NaN => nrel_main_idtf: [NaN](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_NaN;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[NaN - это <b><sc_element sys_idtf="nrel_value_of_variable">значение</b></sc_element>, представляющее не-число (Not-A-Number).](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (NaN)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        nrel_value_of_variable
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_NaN;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[NaN является неравным (посредством сравнения через ==, !=, ===, and !==) любому другому <b><sc_element sys_idtf="nrel_value_of_variable">значению</b></sc_element>, включая другое <b><sc_element sys_idtf="nrel_value_of_variable">значение</b></sc_element> NaN.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение (NaN).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        nrel_value_of_variable
+    };;
+*);;

@@ -1,0 +1,39 @@
+sc_node_not_relation->concept_storage;;
+sc_node_not_relation->concept_css_selectors;;
+sc_node_not_relation->concept_selector;;
+sc_node_not_relation->concept_jquery_fetch;;
+
+sc_node_norole_relation->nrel_stores;;
+sc_node_norole_relation->nrel_get;;
+
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_jquery_fetch=> nrel_main_idtf: [jquery выборка](* <- lang_ru;; *);;
+concept_jquery_fetch=> nrel_main_idtf: [jquery fetch](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_jquery_fetch;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_jquery_fetch">jQuery выборка</b></sc_element> - это <b><sc_element sys_idtf="concept_storage">хранилище</b></sc_element>, которое <b><sc_element sys_idtf="nrel_stores">хранит</b></sc_element> <b><sc_element sys_idtf="nrel_get">полученные</b></sc_element> <b><sc_element sys_idtf="concept_css_selectors">css селекторы</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (jquery выборка)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_storage;
+        concept_css_selectors;
+
+        nrel_stores;
+        nrel_get
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_jquery_fetch;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Мы можем использовать сразу несколько <b><sc_element sys_idtf="concept_selector">селекторов</b></sc_element>, чтобы более детально настроить <b><sc_element sys_idtf="concept_jquery_fetch">выборку jQuery</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(jquery выборка).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_selector
+
+    };;
+*);;

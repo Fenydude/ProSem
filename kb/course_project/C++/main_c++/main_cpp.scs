@@ -1,0 +1,398 @@
+mainCpp => nrel_method_list_of_program: method_list_of_program;;
+method_list_of_program -> ..main
+(* <- concept_function;;
+    <- concept_method;;
+    => nrel_return_type: concept_int;;
+    => nrel_identifier: [main];;
+    => nrel_parameter_list: parameter_list_of_main;;
+    => nrel_concept_function_body: ..main_body (*
+        <- concept_codeblock;;
+    *);;*);;
+    
+
+method_list_of_program => nrel_concept_function_body: ..main_body(*
+    -> rrel_1: ..var
+        (*=> nrel_datatype: concept_int;;
+            =>nrel_identifier: [var];;
+            <- concept_variable;;
+            => nrel_assignment: [3](* 
+                <- concept_const;;
+                <- concept_int;; 
+            *);;
+        *);;
+    -> rrel_2: ..ref (*
+        <- concept_variable;;
+        => nrel_datatype:concept_int;;
+            => nrel_assignment: ..var_reference(*
+                <= nrel_reference: ..var;;
+            *);;
+        *);;
+
+    -> rrel_3: ..pointer  
+        (*=> nrel_datatype: concept_int_pointer;;
+            =>nrel_identifier: [pointer];;
+            <- concept_variable;;
+            => nrel_assignment: ..var_pointer(*
+                <= nrel_reference: ..var;;
+            *);;
+        *);;
+
+    -> rrel_4:..var_reassignment(*
+        <- concept_codeblock;;
+        -> rrel_1: ..var(*
+         => nrel_assignment: ...(*
+            => nrel_pointer: ..pointer;;
+            *);;*);;
+    *);;
+
+        ->rrel_5: ..appleAssignment(*	<-concept_codeblock;;
+        	->rrel_1:..apple(*<- Apple;; => nrel_datatype:concept_auto;; <-concept_pointer;;=> nrel_assignment:...
+	        	(*
+	        		=>call_function:...(*<- operator_new;; => nrel_argument:...(*->rrel_1:...(*<=call_function:...(*
+	        									<-c_Apple;;*);;*);;*);;*);;
+	        	*);;
+	        *);;
+        	->rrel_2:...(*=> call_function:...(*<-getInfo;;*);;*);;
+        	->rrel_3:...(*=> call_function:...(*<- operator_delete;; => nrel_argument:...(*->rrel_1:..apple;;*);;*);;*);;
+        *);;
+
+    -> rrel_6: ..tryCode;;
+
+    -> rrel_7: ..vectorCreation;;
+
+    -> rrel_8: ..current_loop;;
+
+
+    -> rrel_9: ...(* =>call_function:..for_eachCall(*
+        	<- for_each;;
+        	=> nrel_argument: ...(*
+                ->rrel_1: ...(*
+                    <-vector;;
+                    =>call_method:begin;;
+                    *);;
+                    ->rrel_2:...(*<-vector;;=>call_method:end;;*);;
+        			->rrel_3: ...
+        					(*<-concept_lambda;;
+                            =>nrel_argument:...
+        						(*->rrel_1:val(*<- concept_reference;;=>nrel_modificator:concept_const;;*);;*);;
+	        					=>nrel_modificator:concept_mutable;;					
+	        				*);;
+	        		    *);;
+        *);;*);;
+
+    -> rrel_10: ...(*
+        => call_function: ..func1(*
+                => nrel_list_of_arguments: ...(*
+                -> rrel_1: ..var;;
+                *);;
+            *);;
+        *);;
+
+    -> rrel_11: ...(*
+        => call_function: ..func2(*
+                => nrel_list_of_arguments: ...(*
+                -> rrel_1: ...(*<= nrel_concept_reference: ..var;;*);;
+                *);;
+            *);;
+        *);;
+
+    -> rrel_12: ...(*
+        => call_function: ..func2(*
+                => nrel_list_of_arguments: ...(*
+                -> rrel_1: [4](*<- concept_const;;<- concept_int;;*);;
+                *);;
+            *);;
+        *);;
+
+
+    -> rrel_13: ..do_while_loop;;
+
+    -> rrel_14: ..switch_n;;
+
+    -> rrel_15: ..lonDeclaration;;
+
+    -> rrel_16: ..current_while_loop;;
+
+    -> rrel_17: ..return_codeblock(*
+        <-concept_codeblock;;
+        => nrel_return: [0](*
+        <- concept_const;;
+        <- concept_int;;
+    *);;
+    *);;
+*);;
+//TryCode start
+..tryCode     <- concept_codeblock;;
+..catchCodeFirst   <- concept_codeblock;;
+..catchCodeSec   <- concept_codeblock;;
+..tryCode -> ..var(*
+    => nrel_assignment: ...(*
+        => call_function: myStatic(*
+            => concept_namespace: ..my;;
+            => concept_template_class: concept_int;;
+            => call_function: getVar(*
+                => nrel_argument:{[2];[2]};;
+                *);;
+            *);;
+    *);;
+*);;
+..tryCode  => nrel_throw: ..e;;
+
+..thrown => nrel_if_statement: ..tryCode;;
+..thrown => nrel_then_statement: ..catchCodeFirst;;
+
+..eFirst <- ..myException(* <- Exception;; *);;
+
+..eFirst => nrel_identifier: [eFirst];;
+
+..paramsFirstCatch <- sc_node_not_binary_tuple;;
+..paramsFirstCatch -> ..eFirst;;
+..callParamsFirst => nrel_params: ..paramsLastCatch;;
+..catchCodeFirst  => nrel_context: ..callParamsFirst;;
+
+..thrown => nrel_if_statement: ..catchCodeFirst;;
+..thrown => nrel_then_statement: ..catchCode;;
+
+..e <- Exception;;
+..e => nrel_identifier: [e];;
+
+..paramsLastCatch <- sc_node_not_binary_tuple;;
+..paramsLastCatch -> ..e;;
+
+..callParams => nrel_params: ..paramsLastCatch;;
+..catchCode  => nrel_context: ..callParams;;
+//Try code end
+
+//vector start
+Vector <- concept_class;;
+nrel_generalization     <- sc_node_norole_relation;;
+nrel_identifier         <- sc_node_norole_relation;;
+nrel_instance           <- sc_node_norole_relation;;
+nrel_equals             <- sc_node_norole_relation;;
+
+..vectorCreation_exact_generalization <- sc_node_not_binary_tuple;;
+..vectorCreation_exact_generalization -> concept_int;;
+
+..list_of_variables_of_Program -> ..vectorCreation;;
+
+Vector => nrel_instance: ..vectorCreation(* => nrel_identifier: [vector];;
+     => nrel_generalization: ..vectorCreation_generalization;;*);;
+
+..parametrized_object_of_Vector_class <- concept_object;;
+..parametrized_object_of_Vector_class => 
+nrel_generalization: ..vectorCreation_exact_generalization;;
+..parametrized_object_of_Vector_class => nrel_internal_objects: ...(*
+    -> [1](*
+        <- concept_const;;
+        <- concept_int;;
+        => nrel_index: [0](*<- concept_const;;<- concept_int;;*);;
+    *);;
+    -> [4](*
+        <- concept_const;;
+        <- concept_int;;
+        => nrel_index: [1](*<- concept_const;;<- concept_int;;*);;
+    *);;
+    -> [6](*
+        <- concept_const;;
+        <- concept_int;;
+        => nrel_index: [2](*<- concept_const;;<- concept_int;;*);;
+    *);;
+    -> [3](*
+        <- concept_const;;
+        <- concept_int;;
+        => nrel_index: [3](*<- concept_const;;<- concept_int;;*);;
+    *);;
+    -> [6](*
+        <- concept_const;;
+        <- concept_int;;
+        => nrel_index: [4](*<- concept_const;;<- concept_int;;*);;
+    *);;
+*);;
+
+..vectorCreation => nrel_assignment: ..parametrized_object_of_Vector_class;;
+//vector end
+//for each lopp start
+concept_foreach_loop <- concept_loop;;
+concept_compiler_detected_type <- concept_class;;
+
+nrel_foreach <- sc_node_norole_relation;;
+
+..listOfOperatorsForEach <- concept_codeblock;;
+
+
+concept_compiler_detected_type => nrel_instance: ..i;;
+
+..variable => nrel_identifier : [i];;
+
+..current_loop <- concept_foreach_loop;;
+
+Vector <- concept_class;;
+
+Vector => nrel_instance: ..vectorInsideLoop;;
+..current_loop => nrel_foreach: ..vectorInsideLoop;;
+..current_loop => nrel_then_statement: ..listOfOperatorsForEach;;
+listOfOperatorsForEach -> rrel_1: ..cout(*
+        <- system_function;; 
+        => nrel_return_type: concept_void;;
+        => nrel_list_of_operators: ..i(*
+            => nrel_datatype: concept_auto;;//(auto?)
+        *);;
+*);;
+//for each lopp end
+
+// do {
+//     break;
+// } while (true)
+
+concept_while_loop <- concept_loop;;
+
+nrel_break <- sc_node_norole_relation;;
+
+concept_logical_literal -> [false];;
+
+..do_while_loop <- concept_while_loop;;
+
+..do_while_loop => nrel_if_statement: [false];;
+..do_while_loop => nrel_then_statement: ..list_of_operators_of_do_while;;
+..list_of_operators_of_do_while -> rrel_1: ..break(* => nrel_break: ..do_while_loop;;*);;
+
+
+//switch_n
+switch -> ..switch_n(*
+    ->rrel_1: ..parameter_list_of_switch_n;;
+    ->rrel_2: ..list_of_conditions_of_switch_n;;
+*);;
+..parameter_list_of_switch_n -> rrel_1: ..n;;
+..list_of_conditions_of_switch_n -> rrel_1: ..case_1;;
+..list_of_conditions_of_switch_n -> rrel_default: ..default_of_switch_n;;
+//case 1
+
+..case_1 => if_operator: ...(*
+    =>nrel_statement:..n(*=>nrel_equals:[1](*<-concept_const;;<-concept_int;;*);;*);;
+    =>nrel_then: ..list_of_operators_of_case_1;;
+    =>nrel_else: ..default_of_switch_n;;*);;
+
+..list_of_operators_of_case_1 -> rrel_1: break;;
+//default
+..default_of_switch_n -> ..list_of_operators_of_default_of_switch_n;;
+..list_of_operators_of_default_of_switch_n -> rrel_1: break;;
+declaration -> ..lonDeclaration(*
+    -> rrel_1: ..lon(* => nrel_identifier: [lon];;*);;
+    -> rrel_2: [4](*
+        <- concept_const;;
+        <- concept_long_long;;
+    *);;
+*);;
+
+
+// while(lon > 0){
+//     lon--;
+// }
+nrel_if_statement   <- sc_node_norole_relation;;
+nrel_then_statement <- sc_node_norole_relation;;
+
+concept_while_loop <- concept_loop;;
+
+..current_while_loop <- concept_while_loop;;
+
+..current_while_loop => nrel_if_statement: ...(*
+    =>nrel_statement: ..lon(*=> nrel_less: [0] (* <-concept_const;; <-concept_int;; *) ;;*);;
+    =>nrel_then: ..code(*
+    <- concept_codeblock;;
+    <- sc_node_not_binary_tuple;;
+    ->rrel_1: ..decrement(*
+        <- operator_decrement;;
+        => nrel_argument: ..lon;;
+    *);;
+*);;*);;
+
+//const int* func2(const int* num){return num;}
+method_list_of_program -> ..func2 (*
+    <- concept_function;;
+    <- concept_const;;
+    => nrel_params: ...(*
+        -> rrel_1: ..num_func2(*<-concept_int_pointer;;*);;
+    *);;
+    => nrel_identifier: [func2];;
+    => nrel_return_type: ...(* <- concept_int_pointer;; *);;
+    => nrel_concept_function_body: ..body_func_2(*
+        <- concept_codeblock;;
+        =>nrel_return: ..num_func2;;
+    *);;
+*);;
+
+method_list_of_program -> ..func1 (*
+    <- concept_function;;
+    <- concept_const;;
+    => nrel_params: ...(*
+        -> rrel_1: ..num_func1(*<-concept_reference;;*);;
+    *);;
+    => nrel_identifier: [func1];;
+    => nrel_return_type: ...(* <- concept_reference;; *);;
+    => nrel_concept_function_body: ..body_func_1(*
+        <- concept_codeblock;;
+        =>nrel_return: ..num_func1;;
+    *);;
+*);;
+
+method_list_of_program -> ..func3 (*
+    <- concept_function;;
+    => nrel_params: ...(*
+        -> rrel_1: ..num_func3(*<-concept_reference;;*);;
+    *);;
+    => nrel_identifier: [func3];;
+    => nrel_return_type: ...(* <- concept_reference;; *);;
+    => nrel_concept_function_body: ..body_func_3(*
+        <- concept_codeblock;;
+        =>nrel_return: ..num_func3;;
+    *);;
+*);;
+
+method_list_of_program -> ..func4 (*
+    <- concept_function;;
+    <- concept_const;;
+    => nrel_params: ...(*
+        -> rrel_1: ..num_func4(*<-concept_int;; <- concept_const;;*);;
+    *);;
+    => nrel_identifier: [func4];;
+    => nrel_return_type: ...(* <- concept_int;; <- concept_const;; *);;
+    => nrel_concept_function_body: ..body_func_4(*
+        <- concept_codeblock;;
+        =>nrel_return: ..num_func4;;
+    *);;
+*);;
+//int func5(int&& num){return num;}
+method_list_of_program -> ..func5 (*
+    <- concept_function;;
+    => nrel_params: ...(*
+        -> rrel_1: ..num_func5(*<-concept_int;; <- concept_rvalue_cpp;;*);;
+    *);;
+    => nrel_identifier: [func5];;
+    => nrel_return_type: ...(* <- concept_int;; <- concept_const;; *);;
+    => nrel_concept_function_body: ..body_func_5(*
+        <- concept_codeblock;;
+        =>nrel_return: ..num_func5;;
+    *);;
+*);;
+//const int func6(const int&& num){return num;}
+method_list_of_program -> ..func6 (*
+    <- concept_function;;
+    <- concept_const;;
+    => nrel_params: ...(*
+        -> rrel_1: ..num_func6(*<-concept_int;; <- concept_const;; <- concept_rvalue_cpp;;*);;
+    *);;
+    => nrel_identifier: [func6];;
+    => nrel_return_type: ...(* <- concept_int;; <- concept_const;; *);;
+    => nrel_concept_function_body: ..body_func_6(*
+        <- concept_codeblock;;
+        =>nrel_return: ..num_func6;;
+    *);;
+*);;
+
+/*//onst int& func1(const int& num){return num;}
+//const int* func2(const int* num){return num;}
+//int& func3(int& num){return num;}
+//const int func4(const int num){return num;}
+int func5(int&& num){return num;}
+const int func6(const int&& num){return num;}
+*/

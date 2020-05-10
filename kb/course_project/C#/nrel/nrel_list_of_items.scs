@@ -1,0 +1,34 @@
+//list of items
+//список предметов
+
+//Идентификаторы
+nrel_list_of_items => nrel_main_idtf: [ список предметов* ](* <- lang_ru;; *);;
+nrel_list_of_items => nrel_main_idtf: [ list of items* ](* <- lang_en;; *);;
+
+//Свойства
+relation => nrel_inclusion: oriented_relation;; 
+relation => nrel_inclusion: norole_relation;;
+relation => nrel_inclusion: binary_relation;;
+oriented_relation -> nrel_list_of_items;;
+norole_relation-> nrel_list_of_items;;
+binary_relation => nrel_inclusion: antireflexive_relation;;
+binary_relation => nrel_inclusion: asymmetric_relation;; 
+binary_relation => nrel_inclusion: antitransitive_relation;; 
+antitransitive_relation -> nrel_list_of_items;;
+antireflexive_relation  -> nrel_list_of_items;; 
+asymmetric_relation  -> nrel_list_of_items;;
+
+//Домены
+nrel_list_of_items => nrel_first_domain: concept_enum;;
+nrel_list_of_items => nrel_second_domain: set;;
+nrel_list_of_items => nrel_definitional_domain:
+{
+    concept_enum;
+    set
+};;
+//Арность
+sc_node_not_relation -> ..y;;
+arity -> ..y;;
+..y -> nrel_list_of_items;;
+concept_2 <- number;;
+concept_2 <= measurement: ..y;;

@@ -1,0 +1,10 @@
+
+
+concept_delegate <- sc_node_not_relation;;
+concept_delegate <- concept_function;;
+
+//Идентификаторы
+concept_delegate => nrel_main_idtf: [делегат](* <- lang_ru;; *);;
+concept_delegate => nrel_main_idtf: [delegate](* <- lang_en;; *);;
+
+

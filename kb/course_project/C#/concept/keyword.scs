@@ -1,0 +1,8 @@
+//keyword
+//ключевое слово
+concept_keyword <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_keyword => nrel_main_idtf: [ключевое слово](* <- lang_ru;; *);;
+concept_keyword => nrel_main_idtf: [keyword](* <- lang_en;; *);;
+

@@ -1,0 +1,8 @@
+//switch
+
+switch <- sc_node_not_relation;;
+
+//Идентификаторы
+switch => nrel_main_idtf: [switch](* <- lang_en;; *);;
+
+

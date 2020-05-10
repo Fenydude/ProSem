@@ -1,0 +1,34 @@
+sc_node_not_relation->concept_callback;;
+sc_node_not_relation->concept_function;;
+sc_node_not_relation->concept_callback;;
+
+sc_node_norole_relation->nrel_execution;;
+sc_node_norole_relation->nrel_transmit;;
+
+concept_callback=> nrel_main_idtf: [коллбэк](* <- lang_ru;; *);;
+concept_callback=> nrel_main_idtf: [callback](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_callback;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_callback">Коллбэк</b></sc_element> — это <b><sc_element sys_idtf="concept_function">функция</b></sc_element>, которая <b><sc_element sys_idtf="nrel_transmit">передается</b></sc_element> в <b><sc_element sys_idtf="concept_function">функцию</b></sc_element> как аргумент.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (коллбэк)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_function;
+   
+        nrel_transmit
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_callback;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_callback">Коллбэк</b></sc_element> выполняется когда основная <b><sc_element sys_idtf="concept_function">функция</b></sc_element> завершает своё выполнение.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(коллбэк).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_function
+    };;
+*);;

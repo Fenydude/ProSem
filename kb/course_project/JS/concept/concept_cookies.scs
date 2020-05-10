@@ -1,0 +1,48 @@
+sc_node_not_relation->concept_data_fragment;;
+sc_node_not_relation->concept_web_server;;
+sc_node_not_relation->concept_user_computer;;
+sc_node_not_relation->concept_browser;;
+sc_node_not_relation->concept_site;;
+sc_node_not_relation->concept_cookies;;
+
+sc_node_norole_relation->nrel_send;;
+sc_node_norole_relation->nrel_store;;
+sc_node_norole_relation->nrel_require;;
+sc_node_norole_relation->nrel_support;;
+
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_cookies=> nrel_main_idtf: [куки](* <- lang_ru;; *);;
+concept_cookies=> nrel_main_idtf: [cookies](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_cookies;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_cookies">Cookies</b></sc_element> — небольшой <b><sc_element sys_idtf="concept_data_fragment">фрагмент данных</b></sc_element>, <b><sc_element sys_idtf="nrel_send">отправленный</b></sc_element> <b><sc_element sys_idtf="concept_web_server">веб-сервером</b></sc_element> и <b><sc_element sys_idtf="nrel_store">хранимый</b></sc_element> на <b><sc_element sys_idtf="concept_user_computer">компьютере пользователя</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (cookies)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_data_fragment;
+        concept_web_server;
+        concept_user_computer;
+
+        nrel_send;
+        nrel_store
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_cookies;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="nrel_support">Поддержки</b></sc_element> <b><sc_element sys_idtf="concept_browser">браузерами</b></sc_element> <b><sc_element sys_idtf="concept_cookies">cookie</b></sc_element> <b><sc_element sys_idtf="nrel_require">требуют</b></sc_element> многие <b><sc_element sys_idtf="concept_site">сайты</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(cookies).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_browser;
+        concept_site;
+
+        nrel_require;
+        nrel_support
+
+    };;
+*);;

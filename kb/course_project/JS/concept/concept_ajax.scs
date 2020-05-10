@@ -1,0 +1,36 @@
+sc_node_not_relation->concept_server;;
+sc_node_not_relation->concept_data;;
+sc_node_not_relation->concept_ajax;;
+
+sc_node_norole_relation->nrel_exchange;;
+sc_node_norole_relation->nrel_access;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_ajax=> nrel_main_idtf: [аякс](* <- lang_ru;; *);;
+concept_ajax=> nrel_main_idtf: [ajax](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_ajax;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_ajax">Аякс</b></sc_element> — это технология, <b><sc_element sys_idtf="nrel_access">обращения</b></sc_element> к <b><sc_element sys_idtf="concept_server">серверу</b></sc_element> без перезагрузки страницы.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (аякс)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_server;
+
+        nrel_access
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_ajax;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[С помощью <b><sc_element sys_idtf="concept_ajax">аякс</b></sc_element> можно <b><sc_element sys_idtf="nrel_exchange">обмениваться</b></sc_element> любыми <b><sc_element sys_idtf="concept_data">данными</b></sc_element> с <b><sc_element sys_idtf="concept_server">сервером</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(аякс).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_server;
+        concept_data;
+        nrel_exchange
+    };;
+*);;

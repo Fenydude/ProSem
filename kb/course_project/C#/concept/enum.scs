@@ -1,0 +1,10 @@
+//enum
+//перечисление
+
+concept_enum <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_enum => nrel_main_idtf: [перечисление](* <- lang_ru;; *);;
+concept_enum => nrel_main_idtf: [enum](* <- lang_en;; *);;
+
+

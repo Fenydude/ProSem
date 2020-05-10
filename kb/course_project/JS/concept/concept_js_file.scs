@@ -1,0 +1,40 @@
+sc_node_not_relation->concept_code;;
+sc_node_not_relation->concept_js_language;;
+sc_node_not_relation->concept_text_editor;;
+sc_node_not_relation->concept_js_file;;
+
+sc_node_norole_relation->nrel_contains;;
+sc_node_norole_relation->nrel_open;;
+sc_node_norole_relation->nrel_written;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_js_file=> nrel_main_idtf: [js файл](* <- lang_ru;; *);;
+concept_js_file=> nrel_main_idtf: [js file](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_js_file;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_js_file">JS файл</b></sc_element> - это файл, который <b><sc_element sys_idtf="nrel_contains">содержит</b></sc_element> <b><sc_element sys_idtf="concept_code">код</b></sc_element> исполняемого сценария <b><sc_element sys_idtf="nrel_written">написанный</b></sc_element> на <b><sc_element sys_idtf="concept_js_language">языке JavaScript</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (js файл)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_code;
+        concept_js_language;
+
+        nrel_contains;
+        nrel_written
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_js_file;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_js_file">JS файлы</b></sc_element> могут быть <b><sc_element sys_idtf="nrel_open">открыты</b></sc_element> в <b><sc_element sys_idtf="concept_text_editor">текстовом редакторе</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(js файл).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_text_editor;
+
+        nrel_open
+    };;
+*);;

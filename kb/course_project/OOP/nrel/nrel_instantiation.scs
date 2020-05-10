@@ -1,0 +1,38 @@
+sc_node_norole_relation -> nrel_instantiation;;
+
+nrel_instantiation
+<- oop;
+=> nrel_main_idtf:
+		[instantiation]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [конкретизация]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_object;
+=> nrel_second_domain : concept_constructor;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_instantiation;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Конкретизация - это вызов <b><sc_element sys_idtf="concept_constructor">конструктора</b> класса для инициализации <b><sc_element sys_idtf="concept_object">объекта</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (конкретизация)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_constructor;
+		concept_object	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_instantiation;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[При конкретизации <b><sc_element sys_idtf="concept_constructor">конструктору</b> можно передавать <b><sc_element sys_idtf="nrel_argument">аргументы</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(конкретизация)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_constructor;
+		nrel_argument
+	};;
+*);;

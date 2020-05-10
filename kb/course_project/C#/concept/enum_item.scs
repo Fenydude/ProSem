@@ -1,0 +1,10 @@
+//enum
+//перечисление
+
+enum_item <- sc_node_not_relation;;
+
+//Идентификаторы
+enum_item => nrel_main_idtf: [элемент перечисления](* <- lang_ru;; *);;
+enum_item => nrel_main_idtf: [enum item](* <- lang_en;; *);;
+
+

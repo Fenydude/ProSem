@@ -1,0 +1,9 @@
+
+
+concept_code_block <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_code_block => nrel_main_idtf: [блок кода](* <- lang_ru;; *);;
+concept_code_block => nrel_main_idtf: [block of code](* <- lang_en;; *);;
+
+

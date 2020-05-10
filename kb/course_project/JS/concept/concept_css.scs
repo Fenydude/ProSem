@@ -1,0 +1,50 @@
+sc_node_not_relation->concept_css;;
+sc_node_not_relation->concept_formal_language;;
+sc_node_not_relation->concept_document;;
+sc_node_not_relation->concept_html;;
+sc_node_not_relation->concept_web_page;;
+sc_node_not_relation->concept_web_page_creators;;
+sc_node_not_relation->concept_color;;
+sc_node_not_relation->concept_block;;
+sc_node_not_relation->concept_style;;
+sc_node_not_relation->concept_font;;
+
+sc_node_norole_relation->nrel_setting;;
+sc_node_norole_relation->nrel_used;;
+sc_node_norole_relation->nrel_position;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_css=> nrel_main_idtf: [CSS](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_css;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_css">CSS</b></sc_element> — <b><sc_element sys_idtf="concept_formal_language">формальный язык</b></sc_element> описания внешнего вида <b><sc_element sys_idtf="concept_document">документа</b></sc_element>, написанного с использованием <b><sc_element sys_idtf="concept_html">языка разметки</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (css)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_formal_language;
+        concept_document;
+        concept_html
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_css;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_css">CSS</b></sc_element> <b><sc_element sys_idtf="nrel_used">используется</b></sc_element> <b><sc_element sys_idtf="concept_web_page_creators">создателями веб-страниц</b></sc_element> для <b><sc_element sys_idtf="">nrel_setting</b>задания</sc_element> <b><sc_element sys_idtf="concept_color">цветов</b></sc_element>, <b><sc_element sys_idtf="concept_font">шрифтов</b></sc_element>, <b><sc_element sys_idtf="concept_style">стилей</b></sc_element>, <b><sc_element sys_idtf="nrel_position">расположения</b></sc_element> отдельных <b><sc_element sys_idtf="concept_block">блоков</b></sc_element> и других аспектов представления внешнего вида этих <b><sc_element sys_idtf="concept_web_page">веб-страницах</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(css).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_web_page_creators;
+        concept_web_page;
+        concept_color;
+        concept_style;
+        concept_font;
+        concept_block;
+
+        nrel_used;
+        nrel_setting;
+        nrel_position
+    };;
+*);;

@@ -1,0 +1,54 @@
+sc_node_not_relation->concept_stack;;
+sc_node_not_relation->concept_information;;
+sc_node_not_relation->concept_function;;
+sc_node_not_relation->concept_program;;
+sc_node_not_relation->concept_subroutine;;
+sc_node_not_relation->concept_return_adress;;
+sc_node_not_relation->concept_next_instruction;;
+sc_node_not_relation->concept_control;;
+sc_node_not_relation->concept_callstack;;
+
+sc_node_norole_relation->nrel_storing;;
+sc_node_norole_relation->nrel_return_control;;
+sc_node_norole_relation->nrel_removed;;
+sc_node_norole_relation->nrel_transmitted;;
+
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_callstack=> nrel_main_idtf: [Стек вызовов](* <- lang_ru;; *);;
+concept_callstack=> nrel_main_idtf: [Callstack](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_callstack;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_callstack">Стек вызовов</b></sc_element> — <b><sc_element sys_idtf="concept_stack">стек</b></sc_element>, <b><sc_element sys_idtf="nrel_storing">хранящий</b></sc_element> <b><sc_element sys_idtf="concept_information">информацию</b></sc_element> для <b><sc_element sys_idtf="nrel_return_control">возврата управления</b></sc_element> из <b><sc_element sys_idtf="concept_function">функций</b></sc_element> в <b><sc_element sys_idtf="concept_program">программу</b></sc_element> или <b><sc_element sys_idtf="concept_subroutine">подпрограмму</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (Стек вызовов)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_stack;
+        concept_information;
+        concept_function;
+        concept_program;
+        concept_subroutine;
+
+        nrel_storing;
+        nrel_return_control
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_callstack;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[При возврате из подпрограммы <b><sc_element sys_idtf="concept_return_adress">адрес возврата</b></sc_element> <b><sc_element sys_idtf="nrel_removed">снимается</b></sc_element> со <b><sc_element sys_idtf="concept_stack">стека</b></sc_element>, и <b><sc_element sys_idtf="concept_control">управление</b></sc_element> <b><sc_element sys_idtf="nrel_transmitted">передается</b></sc_element> на <b><sc_element sys_idtf="concept_next_instruction">следующую инструкцию</b></sc_element> приостановленной программы.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(Стек вызовов).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_return_adress;
+        concept_stack;
+        concept_control;
+        concept_next_instruction;
+
+        nrel_removed;
+        nrel_transmitted
+    };;
+*);;

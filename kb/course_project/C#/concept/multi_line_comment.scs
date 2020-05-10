@@ -1,0 +1,10 @@
+//multi_line_comment
+//многострочный комментарий
+
+concept_multi_line_comment <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_multi_line_comment => nrel_main_idtf: [многострочный комментарий](* <- lang_ru;; *);;
+concept_multi_line_comment => nrel_main_idtf: [multi line comment](* <- lang_en;; *);;
+
+

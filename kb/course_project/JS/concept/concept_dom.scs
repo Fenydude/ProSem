@@ -1,0 +1,53 @@
+sc_node_not_relation->concept_interface;;
+sc_node_not_relation->concept_program;;
+sc_node_not_relation->concept_script;;
+sc_node_not_relation->concept_html_document;;
+sc_node_not_relation->concept_xhtml_document;;
+sc_node_not_relation->concept_xml_document;;
+sc_node_not_relation->concept_content;;
+sc_node_not_relation->concept_structure;;
+sc_node_not_relation->concept_document;;
+sc_node_not_relation->concept_node_tree;;
+sc_node_not_relation->concept_dom;;
+
+sc_node_norole_relation->nrel_performance;;
+sc_node_norole_relation->nrel_let_get_access;;
+sc_node_norole_relation->nrel_let_change;;
+// <b><sc_element sys_idtf=""></b></sc_element>
+concept_dom=> nrel_main_idtf: [объектная модель документа](* <- lang_ru;; *);;
+concept_dom=> nrel_main_idtf: [document object model](* <- lang_en;; *);;
+
+definition ->...
+(*
+    ->rrel_key_sc_element: concept_dom;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_dom">Объектная модель документа</b></sc_element> - <b><sc_element sys_idtf="concept_interface">программный интерфейс</b></sc_element>, <b><sc_element sys_idtf="nrel_let_change">позволяющий изменять</b></sc_element> и <b><sc_element sys_idtf="nrel_let_get_access">получать доступ</b></sc_element> <b><sc_element sys_idtf="concept_program">программам</b></sc_element> и <b><sc_element sys_idtf="concept_script">скриптам к содержимому <b><sc_element sys_idtf="concept_html_document">HTML</b></sc_element>-, <b><sc_element sys_idtf="concept_xhtml_document">XHTML</b></sc_element>- и <b><sc_element sys_idtf="concept_xml_document">XML</b></sc_element>-документов</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Определение (объектная модель документа)](*<- lang_ru;;*);;
+
+    => nrel_using_constants:
+    { 
+        concept_interface;
+        concept_program;
+        concept_script;
+        concept_html_document;
+        concept_xhtml_document;
+        concept_xml_document;
+        concept_content;
+        concept_structure;
+
+        nrel_let_get_access;
+        nrel_let_change
+    };;
+*);;
+
+statement ->...
+(*
+    ->rrel_key_sc_element: concept_dom;;
+    <= nrel_sc_text_translation: ...(*->rrel_example:[Любой <b><sc_element sys_idtf="concept_document">документ</b></sc_element> известной структуры с помощью <b><sc_element sys_idtf="concept_dom">DOM</b></sc_element> может быть <b><sc_element sys_idtf="nrel_performance">представлен</b></sc_element> в виде <b><sc_element sys_idtf="concept_node_tree">дерева узлов</b></sc_element>.](*<-lang_ru;; => nrel_format: format_html;; *);;*);;
+    => nrel_main_idtf: [Утверждение(объектная модель документа).](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        concept_document;
+        concept_node_tree;
+        nrel_performance
+    };;
+*);;

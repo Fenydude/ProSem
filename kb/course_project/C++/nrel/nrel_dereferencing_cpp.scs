@@ -1,0 +1,38 @@
+sc_node_norole_relation -> nrel_dereferencing_cpp;;
+
+nrel_dereferencing_cpp
+<- c_plus_plus;
+=> nrel_main_idtf:
+		[dereferencing(*)]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [разыменование указателя(*)]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_pointer;
+=> nrel_second_domain : concept_value;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_dereferencing_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция разыменования - это операция которая возвращает <b><sc_element sys_idtf="concept_value">значение</b> <b><sc_element sys_idtf="concept_pointer">указателя</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (разыменование указателя(*))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_pointer;
+		concept_value	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_dereferencing_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Нельзя разыменовать <b><sc_element sys_idtf="concept_rvalue_cpp">rvalue</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(разыменование указателя(*))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_rvalue_cpp;
+		nrel_dereferencing_cpp
+	};;
+*);;

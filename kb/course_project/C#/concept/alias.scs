@@ -1,0 +1,10 @@
+//alias
+//Псевдоним
+
+alias <- sc_node_not_relation;;
+
+//Идентификаторы
+alias => nrel_main_idtf: [псевдоним](* <- lang_ru;; *);;
+alias => nrel_main_idtf: [alias](* <- lang_en;; *);;
+
+

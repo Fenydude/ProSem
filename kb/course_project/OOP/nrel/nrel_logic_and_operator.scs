@@ -1,0 +1,43 @@
+sc_node_norole_relation -> nrel_logic_and_operator;;
+sc_node_not_relation -> concept_true;;
+sc_node_norole_relation -> nrel_type_casting;;
+sc_node_not_relation -> concept_boolean;;
+sc_node_norole_relation -> nrel_parametr;;
+
+nrel_logic_and_operator
+<- structural_programming;
+=> nrel_main_idtf:
+		[logic AND (&&)]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [логическое И(&&)]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_value;
+=> nrel_second_domain : concept_value;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_logic_and_operator;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[логическое И - возращает <b><sc_element sys_idtf="concept_true">true</b> когда оба <b><sc_element sys_idtf="concept_expression">выражения</b> верны](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (логическое И(&&))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_expression;
+		concept_true
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_logic_and_operator;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="nrel_parametr">Параметры</b> оператора И <b><sc_element sys_idtf="nrel_type_casting">приводятся</b> к типу <b><sc_element sys_idtf="concept_boolean">boolean</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(логическое И(&&))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_type_casting;
+		concept_boolean;
+		nrel_parametr
+	};;
+*);;

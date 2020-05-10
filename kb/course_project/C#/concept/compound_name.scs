@@ -1,0 +1,10 @@
+//compound_name
+//составное имя
+
+concept_compound_name <- sc_node_not_relation;;
+
+//Идентификаторы
+concept_compound_name => nrel_main_idtf: [составное имя](* <- lang_ru;; *);;
+concept_compound_name => nrel_main_idtf: [compound name](* <- lang_en;; *);;
+
+

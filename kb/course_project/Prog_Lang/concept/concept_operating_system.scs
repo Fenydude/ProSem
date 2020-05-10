@@ -1,0 +1,37 @@
+
+
+sc_node_not_relation->concept_operating_system;;
+
+
+
+
+concept_operating_system=> nrel_main_idtf: [операционная система](* <- lang_ru;; *);;
+concept_operating_system=> nrel_main_idtf: [operating system](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: concept_operating_system;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Операционная система, сокр. ОС — комплекс взаимосвязанных <b><sc_element sys_idtf="program">программ</b></sc_element>, предназначенных для управления ресурсами компьютера и организации взаимодействия с <b><sc_element sys_idtf="concept_user">пользователем</b></sc_element>.](*<-lang_ru;;=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (операционная система)](*<- lang_ru;;*);;
+=> nrel_using_constants: 
+{
+   program;
+   concept_computer;
+   concept_user
+
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element: concept_operating_system;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[В логической структуре типичной вычислительной системы операционная система занимает положение между устройствами с их микроархитектурой, машинным языком и, возможно, собственными (встроенными) микропрограммами (драйверами) — с одной стороны — и <b><sc_element sys_idtf="concept_application_software">прикладными программами </b></sc_element>с другой.](*<-lang_ru;;=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(операционная система)](*<- lang_ru;;*);;
+=> nrel_using_constants: 
+{
+  concept_application_software
+};;
+*);;
+
+
+
+

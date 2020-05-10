@@ -1,0 +1,10 @@
+//linq_selection
+//LINQ выражение
+
+linq_selection <- sc_node_not_relation;;
+
+//Идентификаторы
+linq_selection => nrel_main_idtf: [LINQ выражение](* <- lang_ru;; *);;
+linq_selection => nrel_main_idtf: [linq selection](* <- lang_en;; *);;
+
+

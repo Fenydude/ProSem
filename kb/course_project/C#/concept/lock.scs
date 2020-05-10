@@ -1,0 +1,10 @@
+//lock
+//блокирование объекта
+
+lock <- sc_node_not_relation;;
+
+//Идентификаторы
+lock => nrel_main_idtf: [ блокирование объекта ](* <- lang_ru;; *);;
+lock => nrel_main_idtf: [lock](* <- lang_en;; *);;
+
+
